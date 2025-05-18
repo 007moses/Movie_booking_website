@@ -1,0 +1,108 @@
+/* Theaters.css */
+.theaters-page {
+    background-color: #121212;
+    min-height: 100vh;
+    padding: 32px 16px;
+    color: #ffffff;
+  }
+  
+  .theaters-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .no-theaters {
+    font-size: 20px;
+    text-align: center;
+    color: #d1d5db;
+  }
+  
+  .theaters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  .theater-card {
+    background-color: #1f2937;
+    border-radius: 8px;
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .theater-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+  
+  .theater-image {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .theater-info {
+    padding: 16px;
+    flex: 1;
+  }
+  
+  .theater-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 12px;
+  }
+  
+  .theater-address {
+    font-size: 14px;
+    color: #d1d5db;
+    margin-bottom: 8px;
+  }
+  
+  .theater-amenities {
+    font-size: 14px;
+    color: #d1d5db;
+    margin-bottom: 12px;
+  }
+  
+  .showtimes-btn {
+    display: inline-block;
+    background-color: #7c3aed;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .showtimes-btn:hover {
+    background-color: #6d28d9;
+    transform: scale(1.05);
+  }
+  
+  @media (max-width: 768px) {
+    .theaters-title {
+      font-size: 28px;
+    }
+  
+    .theaters-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .theater-card {
+      flex-direction: column;
+    }
+  
+    .theater-image {
+      width: 100%;
+      height: 250px;
+    }
+  }

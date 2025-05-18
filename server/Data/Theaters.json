@@ -1,0 +1,178 @@
+[
+  {
+    "name": "Example Theater",
+    "address": "123 Main St",
+    "city": "Sample City",
+    "screens": [
+      {
+        "screenNumber": 1,
+        "totalSeats": 100
+      }
+    ]
+  },
+  {
+    "name": "Galaxy Cinemas",
+    "address": "456 Star Road",
+    "city": "Mumbai",
+    "screens": [
+      {
+        "screenNumber": 1,
+        "totalSeats": 120
+      }
+    ]
+  },
+  {
+    "name": "PVR Grand Mall",
+    "address": "Velachery, Chennai",
+    "city": "Chennai",
+    "screens": [
+      {
+        "screenNumber": 1,
+        "totalSeats": 150
+      }
+    ]
+  },
+  {
+    "name": "INOX City Center",
+    "address": "City Center Mall, Kolkata",
+    "city": "Kolkata",
+    "screens": [
+      {
+        "screenNumber": 1,
+        "totalSeats": 90
+      }
+    ]
+  },
+  {
+    "name": "Carnival Cinemas",
+    "address": "Andheri West",
+    "city": "Mumbai",
+    "screens": [
+      {
+        "screenNumber": 1,
+        "totalSeats": 110
+      }
+    ]
+  },
+  {
+    "name": "Sathyam Cinemas",
+    "address": "Mount Road",
+    "city": "Chennai",
+    "screens": [
+      {
+        "screenNumber": 1,
+        "totalSeats": 200
+      }
+    ]
+  },
+  {
+    "name": "Fun Cinemas",
+    "address": "Sector 18, Noida",
+    "city": "Noida",
+    "screens": [
+      {
+        "screenNumber": 1,
+        "totalSeats": 100
+      }
+    ]
+  },
+  {
+    "name": "Wave Cinemas",
+    "address": "Wave Mall, Lucknow",
+    "city": "Lucknow",
+    "screens": [
+      {
+        "screenNumber": 1,
+        "totalSeats": 130
+      }
+    ]
+  },
+  {
+    "name": "Cinepolis High Street",
+    "address": "High Street Phoenix Mall",
+    "city": "Mumbai",
+    "screens": [
+      {
+        "screenNumber": 1,
+        "totalSeats": 140
+      }
+    ]
+  },
+  {
+    "name": "INOX GVK Mall",
+    "address": "GVK One Mall, Banjara Hills",
+    "city": "Hyderabad",
+    "screens": [
+      {
+        "screenNumber": 1,
+        "totalSeats": 160
+      }
+    ]
+  },
+  {
+    "name": "Miraj Cinemas",
+    "address": "Mall Road, Bhopal",
+    "city": "Bhopal",
+    "screens": [
+      {
+        "screenNumber": 1,
+        "totalSeats": 80
+      }
+    ]
+  },
+  {
+    "name": "PVR Orion Mall",
+    "address": "Orion Mall, Rajajinagar",
+    "city": "Bengaluru",
+    "screens": [
+      {
+        "screenNumber": 1,
+        "totalSeats": 170
+      }
+    ]
+  },
+  {
+    "name": "Raj Mandir Cinema",
+    "address": "Panch Batti, MI Road",
+    "city": "Jaipur",
+    "screens": [
+      {
+        "screenNumber": 1,
+        "totalSeats": 300
+      }
+    ]
+  },
+  {
+    "name": "E-Square Multiplex",
+    "address": "University Road",
+    "city": "Pune",
+    "screens": [
+      {
+        "screenNumber": 1,
+        "totalSeats": 115
+      }
+    ]
+  },
+  {
+    "name": "Asia Multiplex",
+    "address": "Ring Road, Surat",
+    "city": "Surat",
+    "screens": [
+      {
+        "screenNumber": 1,
+        "totalSeats": 95
+      }
+    ]
+  },
+  {
+    "name": "M2K Cinemas",
+    "address": "Pitampura",
+    "city": "Delhi",
+    "screens": [
+      {
+        "screenNumber": 1,
+        "totalSeats": 105
+      }
+    ]
+  }
+]
