@@ -5,20 +5,29 @@ import Booking from '../models/Bookings.js';
 // @route   POST /api/theaters
 // @access  Private (Admin)
 const createTheater = async (req, res) => {
-  const { name, address, city, screens } = req.body;
+  const { name, address, city, image, showtimes } = req.body;
 
   // Validate input with specific error messages
   const missingFields = [];
   if (!name) missingFields.push('name');
   if (!address) missingFields.push('address');
   if (!city) missingFields.push('city');
-  if (!screens || !Array.isArray(screens) || screens.length === 0) {
-    missingFields.push('screens (must be a non-empty array)');
-  }
 
   if (missingFields.length > 0) {
     res.status(400);
     throw new Error(`Missing required fields: ${missingFields.join(', ')}`);
+  }
+
+  // Validate showtimes if provided
+  if (showtimes && (!Array.isArray(showtimes) || showtimes.length === 0)) {
+    res.status(400);
+    throw new Error('Showtimes must be a non-empty array');
+  }
+
+  // Validate image URL format if provided
+  if (image && !/^(https?:\/\/.*\.(?:png|jpg|jpeg|gif|webp|svg))$/i.test(image)) {
+    res.status(400);
+    throw new Error('Image must be a valid URL ending in .png, .jpg, .jpeg, .gif, .webp, or .svg');
   }
 
   // Check if theater already exists by name and city
@@ -34,7 +43,8 @@ const createTheater = async (req, res) => {
       name,
       address,
       city,
-      screens,
+      image: image || null, // Default to null if not provided
+      showtimes: showtimes || [], // Default to empty array if not provided
     });
 
     res.status(201).json({
@@ -56,7 +66,9 @@ const createTheater = async (req, res) => {
 // @route   GET /api/theaters
 // @access  Public
 const getTheaters = async (req, res) => {
-  const theaters = await Theater.find({}).select('name address city screens');
+  const theaters = await Theater.find({})
+    .select('name address city image showtimes')
+    .populate('showtimes.movieId', '_id title');
 
   res.status(200).json({
     success: true,
@@ -68,7 +80,9 @@ const getTheaters = async (req, res) => {
 // @route   GET /api/theaters/:id
 // @access  Public
 const getTheaterById = async (req, res) => {
-  const theater = await Theater.findById(req.params.id);
+  const theater = await Theater.findById(req.params.id)
+    .select('name address city image showtimes')
+    .populate('showtimes.movieId', '_id title');
 
   if (!theater) {
     res.status(404);
@@ -81,11 +95,11 @@ const getTheaterById = async (req, res) => {
   });
 };
 
-// @desc    Update theater details or screens
+// @desc    Update theater details or showtimes
 // @route   PATCH /api/theaters/:id
 // @access  Private (Admin)
 const updateTheater = async (req, res) => {
-  const { name, address, city, screens } = req.body;
+  const { name, address, city, image, showtimes } = req.body;
 
   const theater = await Theater.findById(req.params.id);
 
@@ -98,7 +112,20 @@ const updateTheater = async (req, res) => {
   if (name) theater.name = name;
   if (address) theater.address = address;
   if (city) theater.city = city;
-  if (screens) theater.screens = screens;
+  if (image !== undefined) {
+    if (image && !/^(https?:\/\/.*\.(?:png|jpg|jpeg|gif|webp|svg))$/i.test(image)) {
+      res.status(400);
+      throw new Error('Image must be a valid URL ending in .png, .jpg, .jpeg, .gif, .webp, or .svg');
+    }
+    theater.image = image || null;
+  }
+  if (showtimes !== undefined) {
+    if (!Array.isArray(showtimes)) {
+      res.status(400);
+      throw new Error('Showtimes must be an array');
+    }
+    theater.showtimes = showtimes;
+  }
 
   const updatedTheater = await theater.save();
 

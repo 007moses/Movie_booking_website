@@ -1,177 +1,151 @@
 [
   {
-    "name": "Example Theater",
+    "name": "City Cinema",
     "address": "123 Main St",
-    "city": "Sample City",
-    "screens": [
+    "city": "New York",
+    "image": "https://i.postimg.cc/c1F6zz4F/IMG-20250519-WA0003.jpg",
+    "showtimes": [
       {
+        "movieId": "507f1f77bcf86cd799439011",
         "screenNumber": 1,
-        "totalSeats": 100
+        "showDateTime": "2025-05-20T14:30:00Z",
+        "format": "2D",
+        "ticketPrice": 12.99
       }
     ]
   },
   {
-    "name": "Galaxy Cinemas",
-    "address": "456 Star Road",
-    "city": "Mumbai",
-    "screens": [
+    "name": "Grand Screen Theater",
+    "address": "456 Elm St",
+    "city": "Los Angeles",
+    "image": "https://i.postimg.cc/c1F6zz4F/IMG-20250519-WA0003.jpg",
+    "showtimes": [
       {
-        "screenNumber": 1,
-        "totalSeats": 120
+        "movieId": "507f1f77bcf86cd799439012",
+        "screenNumber": 2,
+        "showDateTime": "2025-05-21T16:00:00Z",
+        "format": "3D",
+        "ticketPrice": 15.50
       }
     ]
   },
   {
-    "name": "PVR Grand Mall",
-    "address": "Velachery, Chennai",
-    "city": "Chennai",
-    "screens": [
+    "name": "Ocean View Cinemas",
+    "address": "789 Ocean Ave",
+    "city": "Miami",
+    "image": "https://i.postimg.cc/3Jw0JTcM/IMG-20250519-WA0005.jpg",
+    "showtimes": [
       {
+        "movieId": "507f1f77bcf86cd799439013",
         "screenNumber": 1,
-        "totalSeats": 150
+        "showDateTime": "2025-05-20T19:00:00Z",
+        "format": "IMAX",
+        "ticketPrice": 18.00
       }
     ]
   },
   {
-    "name": "INOX City Center",
-    "address": "City Center Mall, Kolkata",
-    "city": "Kolkata",
-    "screens": [
+    "name": "Metroplex 10",
+    "address": "321 Park Blvd",
+    "city": "Chicago",
+    "image": "https://i.postimg.cc/3Jw0JTcM/IMG-20250519-WA0005.jpg",
+    "showtimes": [
       {
-        "screenNumber": 1,
-        "totalSeats": 90
+        "movieId": "507f1f77bcf86cd799439014",
+        "screenNumber": 5,
+        "showDateTime": "2025-05-22T13:00:00Z",
+        "format": "2D",
+        "ticketPrice": 11.00
       }
     ]
   },
   {
-    "name": "Carnival Cinemas",
-    "address": "Andheri West",
-    "city": "Mumbai",
-    "screens": [
+    "name": "Star Galaxy Theater",
+    "address": "12 Galaxy Way",
+    "city": "Houston",
+    "image": "https://i.postimg.cc/3Jw0JTcM/IMG-20250519-WA0005.jpg",
+    "showtimes": [
       {
-        "screenNumber": 1,
-        "totalSeats": 110
+        "movieId": "507f1f77bcf86cd799439015",
+        "screenNumber": 3,
+        "showDateTime": "2025-05-21T18:00:00Z",
+        "format": "3D",
+        "ticketPrice": 14.00
       }
     ]
   },
   {
-    "name": "Sathyam Cinemas",
-    "address": "Mount Road",
-    "city": "Chennai",
-    "screens": [
+    "name": "Downtown Movie House",
+    "address": "200 Downtown Ln",
+    "city": "Seattle",
+    "image": "https://i.postimg.cc/3Jw0JTcM/IMG-20250519-WA0005.jpg",
+    "showtimes": [
       {
-        "screenNumber": 1,
-        "totalSeats": 200
+        "movieId": "507f1f77bcf86cd799439016",
+        "screenNumber": 2,
+        "showDateTime": "2025-05-20T20:30:00Z",
+        "format": "2D",
+        "ticketPrice": 13.00
       }
     ]
   },
   {
-    "name": "Fun Cinemas",
-    "address": "Sector 18, Noida",
-    "city": "Noida",
-    "screens": [
+    "name": "Ridgeway Cinemas",
+    "address": "87 Ridge Rd",
+    "city": "Denver",
+    "image": "https://i.postimg.cc/3Jw0JTcM/IMG-20250519-WA0005.jpg",
+    "showtimes": [
       {
+        "movieId": "507f1f77bcf86cd799439017",
         "screenNumber": 1,
-        "totalSeats": 100
+        "showDateTime": "2025-05-23T17:45:00Z",
+        "format": "2D",
+        "ticketPrice": 12.00
       }
     ]
   },
   {
-    "name": "Wave Cinemas",
-    "address": "Wave Mall, Lucknow",
-    "city": "Lucknow",
-    "screens": [
+    "name": "Sunset Boulevard Theater",
+    "address": "500 Sunset Blvd",
+    "city": "San Francisco",
+    "image": "https://i.postimg.cc/3Jw0JTcM/IMG-20250519-WA0005.jpg",
+    "showtimes": [
       {
-        "screenNumber": 1,
-        "totalSeats": 130
+        "movieId": "507f1f77bcf86cd799439018",
+        "screenNumber": 4,
+        "showDateTime": "2025-05-21T15:15:00Z",
+        "format": "IMAX",
+        "ticketPrice": 17.00
       }
     ]
   },
   {
-    "name": "Cinepolis High Street",
-    "address": "High Street Phoenix Mall",
-    "city": "Mumbai",
-    "screens": [
+    "name": "Broadway Screens",
+    "address": "33 Broadway",
+    "city": "Boston",
+    "image": "https://i.postimg.cc/MTyVRmyh/IMG-20250519-WA0012.jpg",
+    "showtimes": [
       {
-        "screenNumber": 1,
-        "totalSeats": 140
+        "movieId": "507f1f77bcf86cd799439019",
+        "screenNumber": 2,
+        "showDateTime": "2025-05-22T21:00:00Z",
+        "format": "3D",
+        "ticketPrice": 14.75
       }
     ]
   },
   {
-    "name": "INOX GVK Mall",
-    "address": "GVK One Mall, Banjara Hills",
-    "city": "Hyderabad",
-    "screens": [
+    "name": "CineWorld 8",
+    "address": "91 Cine Dr",
+    "city": "Atlanta",
+    "image": "https://i.postimg.cc/k4cDq1NX/IMG-20250519-WA0004.jpg",
+    "showtimes": [
       {
-        "screenNumber": 1,
-        "totalSeats": 160
-      }
-    ]
-  },
-  {
-    "name": "Miraj Cinemas",
-    "address": "Mall Road, Bhopal",
-    "city": "Bhopal",
-    "screens": [
-      {
-        "screenNumber": 1,
-        "totalSeats": 80
-      }
-    ]
-  },
-  {
-    "name": "PVR Orion Mall",
-    "address": "Orion Mall, Rajajinagar",
-    "city": "Bengaluru",
-    "screens": [
-      {
-        "screenNumber": 1,
-        "totalSeats": 170
-      }
-    ]
-  },
-  {
-    "name": "Raj Mandir Cinema",
-    "address": "Panch Batti, MI Road",
-    "city": "Jaipur",
-    "screens": [
-      {
-        "screenNumber": 1,
-        "totalSeats": 300
-      }
-    ]
-  },
-  {
-    "name": "E-Square Multiplex",
-    "address": "University Road",
-    "city": "Pune",
-    "screens": [
-      {
-        "screenNumber": 1,
-        "totalSeats": 115
-      }
-    ]
-  },
-  {
-    "name": "Asia Multiplex",
-    "address": "Ring Road, Surat",
-    "city": "Surat",
-    "screens": [
-      {
-        "screenNumber": 1,
-        "totalSeats": 95
-      }
-    ]
-  },
-  {
-    "name": "M2K Cinemas",
-    "address": "Pitampura",
-    "city": "Delhi",
-    "screens": [
-      {
-        "screenNumber": 1,
-        "totalSeats": 105
+        "movieId": "507f1f77bcf86cd799439020",
+        "screenNumber": 6,
+        "showDateTime": "2025-05-24T12:00:00Z",
+        "format": "2D",
+        "ticketPrice": 10.50
       }
     ]
   }

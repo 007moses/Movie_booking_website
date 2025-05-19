@@ -19,33 +19,40 @@ const theaterSchema = new mongoose.Schema({
     trim: true,
     maxlength: [50, 'City cannot exceed 50 characters'],
   },
-  screens: [{
+  image: {
+    type: String,
+    trim: true,
+    match: [
+      /^(https?:\/\/.*\.(?:png|jpg|jpeg|gif|webp|svg))/i,
+      'Image must be a valid URL ending in .png, .jpg, .jpeg, .gif, .webp, or .svg'
+    ],
+    default: null,
+  },
+  showtimes: [{
+    movieId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Movie',
+      required: [true, 'Movie ID is required'],
+    },
     screenNumber: {
       type: Number,
-      required: true, 
+      required: [true, 'Screen number is required'],
       min: [1, 'Screen number must be at least 1'],
     },
-    totalSeats: {
-      type: Number,
-      required: [true, 'Total seats is required'],
-      min: [1, 'Total seats must be at least 1'],
+    showDateTime: {
+      type: Date,
+      required: [true, 'Show date and time are required'],
     },
-    seatLayout: [{
-      seatNumber: {
-        type: String,
-        required: [true, 'Seat number is required'],
-        trim: true, // e.g., "A1", "B12"
-      },
-      seatType: {
-        type: String,
-        enum: ['STANDARD', 'PREMIUM', 'VIP'],
-        default: 'STANDARD',
-      },
-      isAvailable: {
-        type: Boolean,
-        default: true,
-      },
-    }],
+    format: {
+      type: String,
+      enum: ['2D', '3D', 'IMAX', '4DX'],
+      default: '2D',
+    },
+    ticketPrice: {
+      type: Number,
+      required: [true, 'Ticket price is required'],
+      min: [0, 'Ticket price cannot be negative'],
+    },
   }],
 }, {
   timestamps: true,
@@ -53,7 +60,7 @@ const theaterSchema = new mongoose.Schema({
 
 // Indexes for efficient querying
 theaterSchema.index({ name: 'text', city: 'text' });
-theaterSchema.index({ 'screens.screenNumber': 1 });
+theaterSchema.index({ 'showtimes.movieId': 1, 'showtimes.showDateTime': 1 });
 
 const Theater = mongoose.model('Theater', theaterSchema);
 

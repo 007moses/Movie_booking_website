@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../Styles/Movies.css";
 // import axios from "axios";
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 import Intrestellar from "../assets/Interstellar.jpg"
 import Inception from "../assets/Inception1.webp"
 import DarkKnight from "../assets/The dark knight.webp"
@@ -27,6 +27,7 @@ const Movies = () => {
   // const [hoveredIcons, setHoveredIcons] = useState(new Set());
   const [ProductData, setProductData] = useState([]);
   // const [quantities, setQuantities] = useState({});
+  const navigate = useNavigate()
 
 
   const ProductItems = () => {
@@ -86,21 +87,27 @@ const Movies = () => {
         {ProductData?.map((movie) => (
           <div key={movie.id} className="movie-card">
             <img
-              src={movie.poster}
-              alt={movie.title}
+              src={movie?.poster}
+              alt={movie?.title}
               className="movie-poster"
             />
             <div className="movie-info">
-              <h2 className="movie-title">{movie.title}</h2>
+              <h2 className="movie-title">{movie?.title}</h2>
               <p className="movie-details">
-                {movie.genre} | {movie.duration} | {movie.rating}
+                {movie?.genre} | {movie?.duration} | {movie?.rating}
               </p>
               {/* <a href={`/movies/${movie.id}`} className="book-now-btn">
                 Book Now
               </a> */}
-              <Link to={`/movies/${movie.id}`} className="book-now-btn">
+              {/* <Button to={`/movies/${movie.id}`} className="book-now-btn">
                 Book Now
-              </Link>
+              </Button>  */}
+              <button
+               className="book-now-btn"
+               onClick={()=>navigate(`/movies/${movie?.title.split(" ").join("-")}`)} >
+                Book Now
+              </button>
+            
             </div>
           </div>
         ))}
